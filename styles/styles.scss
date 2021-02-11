@@ -1,0 +1,115 @@
+@import './typography';
+
+h1 {
+    font-size: 20px;
+    // font-family: $fontfamily;
+    text-align: center;
+    margin: 30px 0;
+}
+
+body {
+    margin: 30px 30px 30px 30px;
+}
+
+.login {
+    position: absolute;
+    right: 100px;
+    top: 30px;
+}
+
+button {
+    height: 25px;
+    width: 80px;
+    box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgb(240, 233,233);
+    border:0;
+}
+
+nav {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    width: 500px;    
+    margin: auto;
+}
+
+.navigation {
+        label {
+        vertical-align: top;
+        height: 30px;
+    }
+}
+
+.banner {
+    margin: 30px 30px 30px 30px;
+    text-align: center;
+    img {
+        width: 1200px;
+        height: 600px;   
+    }
+}
+
+.container {
+    text-align: center;
+
+   &__line {
+        margin: auto;
+        margin-top: 10px;
+        width: 1200px;
+        height: 1px;        
+        background-color: black;
+   }
+}
+
+.plants {
+    margin:20px 100px 30px 100px;
+
+    img {
+        height:300px;
+        width: 300px;        
+    }       
+    &__block {
+        height: 350px;
+        width:350px;
+        text-align: center;
+    }
+
+    &--desc {
+        color: rgb( 86,84,84,1);        
+    }
+    &--price {
+        margin-top: 10px;
+        color: rgb(137,166,133,1);        
+    }
+}
+
+.footer {
+    margin:20px 100px 30px 100px;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: bold;
+
+    &__image {
+        height: 100px;
+        width: 100px;        
+    }
+
+    &__social-icons {
+        display: flex;
+    }
+
+    &--sub {      
+       font-size: small;
+       font-weight: lighter;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .plants {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 20px;      
+    }
+}
+
