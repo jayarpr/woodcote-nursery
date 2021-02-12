@@ -2,105 +2,226 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
-  font-size: 20px;
-  text-align: center;
-  margin: 30px 0;
-}
-
-body {
-  margin: 30px 30px 30px 30px;
-}
-
-.login {
-  position: absolute;
-  right: 100px;
-  top: 30px;
-}
-
-button {
-  height: 25px;
-  width: 80px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-  background-color: #f0e9e9;
-  border: 0;
-}
-
-nav {
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  width: 500px;
-  margin: auto;
-}
-
-.navigation label {
-  vertical-align: top;
-  height: 30px;
-}
-
-.banner {
-  margin: 30px 30px 30px 30px;
-  text-align: center;
-}
-.banner img {
-  width: 1200px;
-  height: 600px;
-}
-
-.container {
-  text-align: center;
-}
-.container__line {
-  margin: auto;
-  margin-top: 10px;
-  width: 1200px;
-  height: 1px;
-  background-color: black;
-}
-
-.plants {
-  margin: 20px 100px 30px 100px;
-}
-.plants img {
-  height: 300px;
-  width: 300px;
-}
-.plants__block {
-  height: 350px;
-  width: 350px;
-  text-align: center;
-}
-.plants--desc {
-  color: #565454;
-}
-.plants--price {
-  margin-top: 10px;
-  color: #89a685;
-}
-
-.footer {
-  margin: 20px 100px 30px 100px;
-  display: flex;
-  justify-content: space-evenly;
-  font-weight: bold;
-}
-.footer__image {
-  height: 100px;
-  width: 100px;
-}
-.footer__social-icons {
-  display: flex;
-}
-.footer--sub {
-  font-size: small;
-  font-weight: lighter;
-}
-
 @media (min-width: 768px) {
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    margin: 30px 0;
+  }
+
+  .login {
+    position: absolute;
+    right: 100px;
+    top: 30px;
+  }
+
+  button {
+    height: 25px;
+    width: 80px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #f0e9e9;
+    border: 0;
+  }
+
+  nav {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    margin: auto;
+  }
+
+  .nav_desktop label {
+    vertical-align: top;
+    height: 30px;
+  }
+
+  .banner {
+    margin: 30px 20px 30px 20px;
+  }
+  .banner img {
+    width: 1400px;
+    height: 650px;
+  }
+
+  .container {
+    text-align: center;
+  }
+  .container__line {
+    margin: auto;
+    margin-top: 10px;
+    width: 1200px;
+    height: 1px;
+    background-color: black;
+  }
+
+  .plants {
+    margin: 20px 100px 30px 100px;
+  }
+  .plants img {
+    height: 300px;
+    width: 300px;
+  }
+  .plants__block {
+    height: 350px;
+    width: 350px;
+    text-align: center;
+  }
+  .plants--desc {
+    color: #565454;
+  }
+  .plants--price {
+    margin-top: 10px;
+    color: #89a685;
+  }
+
+  .footer {
+    margin: 20px 100px 30px 100px;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    font-weight: bold;
+  }
+  .footer__mobile {
+    display: none;
+  }
+  .footer__image {
+    height: 100px;
+    width: 100px;
+  }
+  .footer__topics {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .footer__social-icons {
+    display: flex;
+    width: 150px;
+    justify-content: space-around;
+  }
+  .footer--sub {
+    font-size: small;
+    font-weight: lighter;
+  }
+
+  body {
+    margin: 30px 30px 30px 30px;
+  }
+
+  .nav_mobile {
+    display: none;
+  }
+
   .plants {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 20px;
+  }
+  .plants__mobile {
+    display: none;
+  }
+}
+@media (max-width: 550px) {
+  header {
+    height: 75px;
+  }
+
+  h1 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .login {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+  }
+
+  button {
+    height: 25px;
+    width: 80px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: #f0e9e9;
+    border: 0;
+  }
+
+  nav {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+  }
+
+  .nav__line {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
+  .nav_desktop {
+    display: none;
+  }
+
+  .banner img {
+    width: 375px;
+    height: 300px;
+  }
+
+  .plants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: auto;
+  }
+  .plants__img {
+    text-align: center;
+  }
+  .plants img {
+    height: 150px;
+    width: 150px;
+  }
+  .plants__mobile {
+    display: block;
+    background-color: #9cbabb;
+    font-size: 12px;
+  }
+  .plants--desc {
+    display: none;
+  }
+  .plants--price {
+    display: none;
+  }
+
+  .container {
+    text-align: center;
+  }
+  .container__line {
+    margin: auto;
+    margin-top: 10px;
+    width: 350px;
+    height: 1px;
+    background-color: black;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-weight: bold;
+  }
+  .footer__mobile {
+    display: block;
+  }
+  .footer__image {
+    height: 100px;
+    width: 100px;
+  }
+  .footer__social-icons {
+    display: flex;
+    width: 150px;
+    justify-content: space-around;
+  }
+  .footer__topics {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .footer--sub {
+    display: none;
   }
 }

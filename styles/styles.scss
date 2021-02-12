@@ -1,14 +1,10 @@
 @import './typography';
-
+@media (min-width: 768px) { 
 h1 {
     font-size: 20px;
     // font-family: $fontfamily;
     text-align: center;
     margin: 30px 0;
-}
-
-body {
-    margin: 30px 30px 30px 30px;
 }
 
 .login {
@@ -33,7 +29,7 @@ nav {
     margin: auto;
 }
 
-.navigation {
+.nav_desktop {
         label {
         vertical-align: top;
         height: 30px;
@@ -41,11 +37,11 @@ nav {
 }
 
 .banner {
-    margin: 30px 30px 30px 30px;
-    text-align: center;
+    margin: 30px 20px 30px 20px;
+    //text-align: center;
     img {
-        width: 1200px;
-        height: 600px;   
+        width: 1400px;
+        height: 650px;   
     }
 }
 
@@ -85,17 +81,30 @@ nav {
 
 .footer {
     margin:20px 100px 30px 100px;
-    display: flex;
-    justify-content: space-evenly;
+    // display: flex;
+    // justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 200px 1fr;    
     font-weight: bold;
+
+    &__mobile {
+        display:none;
+    }
 
     &__image {
         height: 100px;
         width: 100px;        
     }
 
+    &__topics {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
     &__social-icons {
         display: flex;
+        width: 150px;
+        justify-content: space-around;
     }
 
     &--sub {      
@@ -105,11 +114,147 @@ nav {
 
 }
 
-@media (min-width: 768px) {
+//@media (min-width: 768px) { //Desktop
+
+    body {
+        margin: 30px 30px 30px 30px;
+    }
+
+    .nav_mobile {
+        display:none;
+    }
     .plants {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        row-gap: 20px;      
+        row-gap: 20px; 
+        
+        &__mobile {
+            display:none;
+        }
+    }
+}
+
+@media (max-width: 550px) { //Mobile
+
+    header {
+        height: 75px;        
+    }
+    h1 {
+        font-size: 15px;        
+        text-align: center;
+    }
+
+    .login {
+        position: absolute;
+        right: 20px;
+        top: 40px;
+    }
+
+    button {
+        height: 25px;
+        width: 80px;
+        box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+        background-color: rgb(240, 233,233);
+        border:0;
+    }
+
+    nav {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+    
+    .nav__line {
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+    }
+
+    .nav_desktop {
+        display: none;
+    }
+
+    .banner {       
+        // margin: 30px 20px 30px 20px;
+        img {
+            width: 375px;
+            height: 300px;   
+        }
+    }
+
+    .plants {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width:auto;
+        //align-items: center;
+        
+        // row-gap: 20px;      
+
+        &__img {
+            text-align: center;
+        }
+        img {
+            height:150px;
+            width: 150px;
+        }        
+
+        &__mobile {
+            display:block;
+            background-color: rgb(156, 186, 187);
+            font-size: 12px;
+        }
+
+        &--desc {
+            display:none;       
+        }
+        &--price {
+            display:none;       
+        }
+    }
+
+    .container {
+        text-align: center;
+        //padding: 10px;
+       &__line {
+            margin: auto;
+            margin-top: 10px;
+            width: 350px;
+            height: 1px;        
+            background-color: black;
+       }
+    }
+
+    .footer {
+       
+        display : grid;
+        grid-template-columns: 1fr 1fr;
+        font-weight: bold;
+
+        &__mobile {
+            display:block;
+        }
+    
+        &__image {
+            height: 100px;
+            width: 100px;        
+        }
+    
+        &__social-icons {
+            display: flex;
+            width: 150px;
+            justify-content: space-around;
+        }
+
+        &__topics {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    
+        &--sub {      
+           display: none;
+        }
+    
     }
 }
 
