@@ -1,0 +1,65 @@
+
+.pots {
+    display: grid;
+    justify-content: center;
+
+    &__img {
+        text-align: center;        
+    }
+    &__img:hover{
+        transform: scale(1.5,1.5);
+    }
+    &--desc {
+        color: rgb( 86,84,84,1);        
+    }
+
+    &--price {
+        margin-top: 10px;
+        color: rgb(137,166,133,1);        
+    }    
+}
+
+@media screen and (min-width: 768px) { 
+   
+    .pots {
+        
+        margin:20px 100px 20px 100px;
+        grid-template-columns: 1fr 1fr 1fr;
+    
+        img {
+            height:300px;
+            width: 300px;        
+        }  
+
+        &__block {
+            height: 350px;
+            width:350px;
+            text-align: center;
+        }  
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+
+    .pots {
+
+        grid-template-columns: 1fr 1fr;
+        width:auto;
+        padding: 10px;
+
+        img {
+            height:150px;
+            width: 150px;
+        }
+
+        &--desc {
+            margin: auto;
+            text-align: center;
+        }
+        &--price {
+            margin: auto;
+            text-align: center;
+        }
+    }
+}

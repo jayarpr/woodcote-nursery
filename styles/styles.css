@@ -126,6 +126,58 @@
     display: none;
   }
 }
+.pots {
+  display: grid;
+  justify-content: center;
+}
+.pots__img {
+  text-align: center;
+}
+.pots__img:hover {
+  transform: scale(1.5, 1.5);
+}
+.pots--desc {
+  color: #565454;
+}
+.pots--price {
+  margin-top: 10px;
+  color: #89a685;
+}
+
+@media screen and (min-width: 768px) {
+  .pots {
+    margin: 20px 100px 20px 100px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .pots img {
+    height: 300px;
+    width: 300px;
+  }
+  .pots__block {
+    height: 350px;
+    width: 350px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 550px) {
+  .pots {
+    grid-template-columns: 1fr 1fr;
+    width: auto;
+    padding: 10px;
+  }
+  .pots img {
+    height: 150px;
+    width: 150px;
+  }
+  .pots--desc {
+    margin: auto;
+    text-align: center;
+  }
+  .pots--price {
+    margin: auto;
+    text-align: center;
+  }
+}
 .footer {
   display: grid;
   justify-content: center;
