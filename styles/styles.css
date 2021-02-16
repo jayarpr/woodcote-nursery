@@ -181,6 +181,19 @@
     display: none;
   }
 }
+button {
+  height: 25px;
+  width: 80px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #f0e9e9;
+  border: 0;
+}
+
+A {
+  text-decoration: none;
+  color: inherit;
+}
+
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 20px;
@@ -192,14 +205,6 @@
     position: absolute;
     right: 100px;
     top: 30px;
-  }
-
-  button {
-    height: 25px;
-    width: 80px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: #f0e9e9;
-    border: 0;
   }
 }
 @media screen and (max-width: 550px) {
@@ -216,13 +221,5 @@
     position: absolute;
     right: 20px;
     top: 40px;
-  }
-
-  button {
-    height: 25px;
-    width: 80px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: #f0e9e9;
-    border: 0;
   }
 }
